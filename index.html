@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" ng-app="myFirstApp">
   <head>
     <meta charset="utf-8">
     <title>Angular </title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
   </head>
   <body>
     <h1>Hello Angular 8 , Now You are learning and reading</h1>
+    <div ng-controller="MyController">
+      <h1>My Calculator </h1>
+      <input type="text" ng-model="name" ng-keyUp="displayNumber()">This name is {{name}} {{finalValue}}
+      <br>
+
+    </div>
   </body>
 </html>
