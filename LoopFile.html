@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="angular.min.js">
+    </script>
+    <title>Itreation Of Elements</title>
+  </head>
+  <body ng-app="LoopElements">
+    <w3-test-directive></w3-test-directive>
+    <!-- <h1>Elements </h1>
+    <div ng-controller="MyController">
+      <ul ng-model="names">
+      Name  <li ng-repeat="x in names">{{x}}</li>
+      </ul>
+    </div> -->
+
+  </body>
+  <script type="text/javascript">
+     var myApp=angular.module("LoopElements",[]);
+     myApp.directive("w3TestDirective",function(){
+       return{
+         template:"<h1>Hello This is jawad nabi</h1>"
+       };
+     });
+    // myApp.controller('MyController',function($scope){
+    //   $scope.names=["jawad","Faraz","Rameez"];
+    // });
+
+  </script>
+</html>
