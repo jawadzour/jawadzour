@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Services </title>
+    <script src="angular.min.js"></script>
+  </head>
+  <body ng-app="MyApp" ng-controller="MyController">
+    <h1>Timer  </h1>
+    <h1>{{intr}}</h1>
+    <script type="text/javascript">
+      angular.module('MyApp',[]).controller('MyController',function($scope , $timeout , $interval){
+        $scope.timeOut="Hello Jawad";
+        $timeout(function(){
+          $scope.timeOut="Hello Jawad Time is out";
+        },2000);
+
+        $scope.intr=100;
+        $interval(function(){
+          $scope.intr--;
+        },1000);
+      }  );
+      // angular.module('MyApp',[]).controller('MyController',function($scope , $location){
+      //   $scope.url=$location.absUrl();
+      // });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <title></title>
+  </head>
+  <body ng-app="MyApp" ng-controller="MyController">
+<h1>Filters in Angular JS</h1>
+{{a | limitTo:5:3}}
+
+<h1>Table Data</h1>
+<div ng-include="'TableClickTask.html'">
+
+</div>
+
+<script type="text/javascript">
+    angular.module('MyApp',[]).controller('MyController',function($scope){
+      $scope.a="Jawad Nabi";
+    });
+</script>
+  </body>
+</html>
