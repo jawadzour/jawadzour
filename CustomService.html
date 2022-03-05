@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Custom Services </title>
+    <script src="angular.min.js">
+
+    </script>
+  </head>
+  <body ng-app="MyApp" ng-controller="MyController">
+    <h1>Addition is </h1>
+    {{addition}}
+    <h1>Multiplication is </h1>
+    {{multiplication}}
+    <script type="text/javascript">
+      var app =angular.module('MyApp',[]);
+      app.service('$Math',function(){
+        this.add=function(a,b){
+          return(a+b);
+        }
+        this.product=function(a,b){
+          return(a*b);
+        }
+      });
+      app.controller("MyController",function($scope,$Math){
+        $scope.addition=$Math.add(5,4);
+        $scope.multiplication=$Math.product (5,4);
+      });
+    </script>
+
+  </body>
+</html>
